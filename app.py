@@ -37,3 +37,5 @@ def index():
         'forecast_data_text_4' : raw_data['data']['text'][4]
     }
     return render_template('index.html',timestamp=timestamp, **parsed_data)
+if __name__ == '__main__':
+        app.run(port=5001)
