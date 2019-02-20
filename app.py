@@ -18,8 +18,7 @@ cache.init_app(app)
 @cache.cached(timeout=1800)
 def index():
     timestamp = datetime.datetime.now()
-    raw_data = requests.get('https://forecast.weather.gov/MapClick.php?lat=40.74&lon=-74&unit=0&lg=english&FcstType=json').json()
-    # raw_data = json.load(open('sample-forecast.json'))
+    raw_data = requests.get('https://forecast.weather.gov/MapClick.php?lat=39.77&lon=-86.16&unit=0&lg=english&FcstType=json').json()
     parsed_data = {
         'areaDescription' : raw_data['location']['areaDescription'],
         'forecast_time' : raw_data['time']['startPeriodName'][0],
