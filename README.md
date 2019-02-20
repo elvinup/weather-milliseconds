@@ -17,7 +17,7 @@ python3 -m venv venv && source venv/bin/activate && pip3 install -r requirements
 sudo python3 -m venv venv
 source venv/bin/activate
 sudo -H pip3 install -r requirements.txt
-sudo FLASK_APP=app.py python3 -m flask run --port=5001
+sudo python3 app.py 
 ```
 
 ### Run forever
